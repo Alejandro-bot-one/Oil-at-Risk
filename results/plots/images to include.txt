@@ -1,0 +1,22 @@
+images to include:
+
+1) Brent crude evolution 
+--
+2) Insample specification plot
+--
+3) 3d in sample fitted distribution
+4) forecasted scatters
+5) OOS Loss function for all models (comparison)
+6) Breaches and fallout for all 3 models
+7) Coverage test plot for the main models.
+8) In sample forecasted values for stressed period (Iran Eve)
+--
+
+9) Fitted distribution to historical returns (unconditional -MLE)
+10) PIT Uniformity test (histogram)
+11) PIT Uniformity test (diagonal accuracy)
+---
+12) Entropy expanding window vs Normal
+13) Entropy expanding window vs Unconditional
+14) Skewness over time expanding window
+15) VaR and CVaR

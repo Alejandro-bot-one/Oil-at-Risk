@@ -1,0 +1,28 @@
+{
+  "description": "OoS \u2014 h=22, GPRD_MA7 specification",
+  "horizon": 22,
+  "x_var": "GPRD_MA7",
+  "y_var": "Brent_Return",
+  "controls": [
+    "usd_index_ld",
+    "Brent_Abs_Return (t-1)",
+    "Realized_Volatility_MA2",
+    "REIA_fd",
+    "natgas_spotprice_ld",
+    "us_weekly_stocks_ld",
+    "badi_ld"
+  ],
+  "quantiles": [
+    0.01,
+    0.05,
+    0.25,
+    0.5,
+    0.75,
+    0.95,
+    0.99
+  ],
+  "training_end_jsu": "12-30-20243",
+  "training_end_skewt": "12-30-20243",
+  "sample_start": "1990-01-01",
+  "created": "2026-06-24"
+}

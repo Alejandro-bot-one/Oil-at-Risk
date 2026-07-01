@@ -1,0 +1,24 @@
+{
+  "description": "OoS \u2014 h=2, GPRD_MA7 specification",
+  "horizon": 2,
+  "x_var": "GPRD_MA7",
+  "y_var": "Brent_Return",
+  "controls": [
+    "usd_index_ld",
+    "Realized_Volatility (t-1)",
+    "badi_ld"
+  ],
+  "quantiles": [
+    0.01,
+    0.05,
+    0.25,
+    0.5,
+    0.75,
+    0.95,
+    0.99
+  ],
+  "training_end_jsu": "12-30-2024",
+  "training_end_skewt": "12-30-2024",
+  "sample_start": "1990-01-01",
+  "created": "2026-06-30"
+}
