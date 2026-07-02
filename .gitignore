@@ -18,3 +18,21 @@ Thumbs.db
 # Output / temp
 *.parquet
 data/aux.py
+
+# Documentation and deliverables
+documentation/
+deliverables/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+build/
