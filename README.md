@@ -50,13 +50,6 @@ TFM/
 │   ├── oil/                  oil price / macroeconomy literature
 │   ├── related literature/   geopolitical oil-price-risk applications
 │   └── risk managment/       Diebold, Gunther & Tay (1998)
-├── deliverable/              ← the written thesis and its component chapters
-│   ├── oil-at-risk.pdf        the full thesis
-│   ├── Methodology and specification.pdf, Direct_Forecasting.pdf,
-│   │   Distribution_Fitting.pdf, Risk_Metrics.pdf, EWS.pdf, Appendix.pdf
-│   ├── drafts/                 working drafts and figures
-│   └── proposal/               the original thesis proposal
-├── documentation/            ← supervisor approvals and administrative paperwork
 ├── results/                  ← saved figures (results/plots/) and OOS output (results/oos/)
 └── _others/                   exploratory side analysis (tourism indicators, not part of OaR)
 ```
@@ -109,17 +102,6 @@ jupyter lab direct_forecasting.ipynb
 ```
 
 Notebooks import the backend rather than redefining estimators inline (`import auxi.qreg as fc`, `import auxi.diagnostics as diags`); a "Restart Kernel → Run All" pass on a notebook is the project's integration/smoke test.
-
-## Deliverables
-
-The written thesis and its component chapters live in `deliverable/`:
-
-- `oil-at-risk.pdf` — the full thesis.
-- `Methodology and specification.pdf`, `Direct_Forecasting.pdf`, `Distribution_Fitting.pdf`, `Risk_Metrics.pdf`, `EWS.pdf`, `Appendix.pdf` — individual chapters/sections.
-- `proposal/` — the original thesis proposal and its presentation.
-- `drafts/` — working drafts, including supervisor correction rounds.
-
-Supervisor sign-off paperwork is in `documentation/`.
 
 ## Key references
 
