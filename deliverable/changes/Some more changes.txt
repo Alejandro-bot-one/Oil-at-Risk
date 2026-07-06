@@ -1,0 +1,116 @@
+Some more changes:
+
+- When creating the narrative around the regressors, I want to give the risk perspective: show how this variables capture different sources of risk (geopolitical, logistical, transference/exchange and specultation/volatility)
+
+Use the efficient market hypothesis to justify the use of risk metrics to study and asset => prices reflect all information available, and they are only a function of risk.
+
+- Remove the closest work part (no time for this)
+
+- Contributions: State the main contribution: adapt a nobel methodology to study the vulnerabilities of oil prices, and present the rest of the contributions as parts of that big contributions.
+
+- Change the order of the literature review to match the script. This is intended to give more cohesion to the presntation and be able to connect things in a more human way.
+
+- Add the KL divergence to the main pillars of this methodology.
+
+- The risk channel definition by Minesso et all is too similar to the one by Kilian, search for another perspective to the thesis of this authors.
+
+- One slide for the brent returns, with the appropriate plot. Then the slide defending why brent and not WTI. Then the regressors slide (one for the 3 regressors and the other for the realized volatility). Remove page 16, the economic narrative has to be around the predictive power of this risk metric, regarding the source of risk (of oil prices) that they capture; this must be included in the previous slides, when you present them. Don't mention the transformations.
+
+- The xpalantion of the 7 days MA will go in the backup slides. In the specification slide I just want the specification (as stated) + the explanation of why no more variables (remove the RV at t-1)
+
+- The slide explaining the QR estimator has to contain only the model, remove the text (it does add anything)
+
+- In the insample estimates, include both the coefficients and the forecasted scatter plots. Include another slide where you compare the coefficients at the different quantiles (one table for each qantile, horizontally separated, just the regressor and the coefficient):
+
+	Dependent Variable	Regressor	Tau	Coefficient	Significance	Pseudo R-Squared
+1	Brent_Return	GPRD_MA7	0.05	-0.000275		0.531477
+10	Brent_Return	GPRD_MA7	0.50	-0.000200		0.033899
+19	Brent_Return	GPRD_MA7	0.95	0.000163		0.559097
+22	Brent_Return	Realized_Volatility	0.05	-0.187220	***	0.531477
+31	Brent_Return	Realized_Volatility	0.50	0.019630	***	0.033899
+40	Brent_Return	Realized_Volatility	0.95	0.187130	***	0.559097
+43	Brent_Return	badi_ld	0.05	0.001257		0.531477
+52	Brent_Return	badi_ld	0.50	0.015345		0.033899
+61	Brent_Return	badi_ld	0.95	0.000103		0.559097
+64	Brent_Return	usd_index_ld	0.05	-0.092836	***	0.531477
+73	Brent_Return	usd_index_ld	0.50	-1.674304	***	0.033899
+82	Brent_Return	usd_index_ld	0.95	-0.066019	**	0.559097
+
+- In the direct forecasting part estimation protocol, jus mention that the model is trained in a 4y rolling window and is independently evaluated in the last 2y of data.
+
+The put the h = 5 slide. To complete the setting part and go on with the next part.
+
+After that, we explain how the breach indicator is build, put a picture of the breaches of the standard model and put the conclusion: our model systematically fails during market shakes.
+
+Then introduce the 2 models, and address how they help solve this issue (the same slide we have)
+
+Then another slide with the breaches indicators of this models. This is the fallowut audit. here we conclude that this models reduce by 3 the number of breaches, therefore they capture better the tail events.
+
+But... 
+
+Then the comparison. The Diebold test results (no model dominates) and the OOS loss functions at the main quantiles. Here the conclusion: at this horizon, the breach indicator does not add significant predictive power.
+
+And a disclaimer: at shorter horizons, this models may improve significantly the predictive power. 
+
+- Distribution fitting: add a slide stating the expression of the Johson Su distribution and the 4 parameters that gover it.
+
+Then we add the the justification slide of why the JSU, only 1 and 3 are valid arguments, remove the 2. 
+
+Then all the MDE slide with the configuarion. Change the over-identified box where a box where you state the training period (the same as before) and the fact that we retrain every 30 days.
+
+Then the testing slide (remove the passing box, i will tell that verbally), only leave the equation, the sentence and the 2 plots. 
+
+Then a slide with the 3D plot!!!
+
+- Risk metrics: 
+
+First slides are fine, but on the main metric only mentionted the KL divergence metric and its formula. 
+
+Put the 2 possible references in another slide.
+
+Then another slide with the fitted unconditional density through MLE in another plot, alongside the roling skewness of the unconditional plot. 
+
+From this, the next slide extract a conclusion: skewness is a risk that we should take into accont, the unconditional distribution actually captures changes in skewness, so using it as a reference may understate risk. For that reason, we use the usually assumed normal distribution as our baseline.
+
+Then the rolling skewness plot.
+
+- The hypothesis: al
+
+
+
+
+
+
+
+For the bacup slides:
+
+[] Add slides where we explain the that the 7 day moving average in greater detail.
+
+We want to things:
+
+1) Smooth the  indicator
+2) Capture the time structure associated with risk transmission through news. 
+
+For that, we build a MA of the GPR. Now we have another problem: the window of time.
+The window had to be large enought to smooth the indicator but short enougth to not induce excesive autocorrelation with the past, because we don't want to carry that mauch memery into the future in such volatitlie index. The 5 days werent chhosen only for arbitrary reason, but actually taking into account the loss function at the given horizon for different windwos on fhte GPR. The result is an optima interval, where we choose the 5 windows among many other optimal windows, because it capture a natural 5 days of trading. 
+
+[] Add slides with the correlation matrix of the regressors in case we are asked about multicollinearity.
+
+[] Add slides explaining the optimization process of the quantile regression, as explained in my thesis. Add another slide with the estimated coefficients
+
+
+[] Add the hypothesis in the backup slides.
+
+[] Add slides explaining all the QR diagnostics
+
+[] Add some slides explaining why we cannot extract causal conclsuions from this regression.
+
+[] Add slides explaining why we cannot iterate the expected value in quantile regression
+
+[] Add a slide explaining that a more rigorous approach would select this horizon in the direct forecasting trying to find the horizon at which the dynamic between regressors and dependent variable are better captured. In  direct forecastin the error doest icreas over time like traditional time series approaches. Because we do not iterate the expected value, the variance isn’t recursively compound over time, but the error increase because of the information decays over time 
+
+[] Add slides explaining the we have choosen the 0.95 threshold for the Hit indicator arbitrarily, but the truth is that a more rigurious approach would imply evaluating the thresholds through a ROC curve, because there is a tradeoff between capturing breaches early and avoiding false recessions triggers (expand this explanation and make it deductive)
+
+[] Add slides making a diclaimer about the breach models. explaining that the breach models arre more efective at shorter horizon, because the breach singal is short termed. 
+
+[] Add slides explaning the Kupiec coerage test and how it helps diagnose this forecast.
