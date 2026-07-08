@@ -15,8 +15,7 @@ __pycache__
 .DS_Store
 Thumbs.db
 
-# TXT
-*.txt
+
 
 # Output / temp
 *.parquet
@@ -24,7 +23,15 @@ data/aux.py
 
 # Documentation and deliverables
 documentation/
-deliverables/
+deliverable/
+
+# Others
+PENDINT.txt
+main_code/tests/
+main_code/docs/
+main_code/context/
+
+
 
 # LaTeX build artifacts
 *.aux
